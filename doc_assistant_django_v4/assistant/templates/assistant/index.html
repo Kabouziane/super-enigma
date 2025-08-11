@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Instaffo — Document Assistant</title>
+<link rel="stylesheet" href="/static/assistant/styles.css"></head>
+<body>
+<div class="container">
+  <h1>Instaffo – Document Assistant (Django + Celery)</h1>
+  <section class="panel">
+    <h2>Upload PDF</h2>
+    <input id="fileinput" type="file" accept="application/pdf" />
+    <button id="uploadBtn">Upload & Index (async)</button>
+    <div id="uploadStatus"></div>
+  </section>
+  <section class="panel">
+    <h2>Ask a question</h2>
+    <textarea id="queryInput" rows="3" placeholder="Ask something about your indexed documents..."></textarea>
+    <button id="askBtn">Ask</button>
+    <div id="answer"></div>
+    <h3>Sources</h3><ul id="sources"></ul>
+  </section>
+  <section class="panel"><h2>Indexed documents</h2><ul>{% for d in documents %}<li>{{ d.title }} — uploaded {{ d.uploaded_at }}</li>{% empty %}<li>No documents yet</li>{% endfor %}</ul></section>
+</div>
+<script src="/static/assistant/app.js"></script>
+</body></html>

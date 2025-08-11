@@ -1,0 +1,24 @@
+version: '3.8'
+services:
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+  web:
+    build: .
+    command: gunicorn config.wsgi:application --bind 0.0.0.0:8000 --workers 1
+    volumes: - .:/app
+    ports: - '8000:8000'
+    environment: - REDIS_URL=redis://redis:6379/0
+    depends_on: - redis
+  worker:
+    build: .
+    command: celery -A config worker -l info
+    volumes: - .:/app
+    environment: - REDIS_URL=redis://redis:6379/0
+    depends_on: - redis
+  beat:
+    build: .
+    command: celery -A config beat -l info --scheduler django_celery_beat.schedulers:DatabaseScheduler
+    volumes: - .:/app
+    environment: - REDIS_URL=redis://redis:6379/0
+    depends_on: - redis
