@@ -1,11 +1,11 @@
 
-# How It Works - Instaffo Document Assistant
+# How It Works -  Document Assistant
 
 ---
 
 ## Introduction
 
-Cette page explique clairement le fonctionnement interne de l'application **Instaffo Document Assistant**. Elle décrit le cheminement des documents et des requêtes, ainsi que les interactions entre les différents composants techniques.
+Cette page explique clairement le fonctionnement interne de l'application ** Document Assistant**. Elle décrit le cheminement des documents et des requêtes, ainsi que les interactions entre les différents composants techniques.
 
 ---
 
@@ -85,7 +85,7 @@ Utilisateur              API Django               Celery Worker               Ve
 
 ## Conclusion
 
-Grâce à cette architecture modulaire et performante, Instaffo Document Assistant permet une gestion efficace et sécurisée de la recherche intelligente dans des documents PDF, avec une scalabilité possible vers le cloud.
+Grâce à cette architecture modulaire et performante,  Document Assistant permet une gestion efficace et sécurisée de la recherche intelligente dans des documents PDF, avec une scalabilité possible vers le cloud.
 
 ---
 

@@ -1,5 +1,5 @@
 
-# Instaffo Document Assistant (Django + AI + Vector Search)
+#  Document Assistant (Django + AI + Vector Search)
 
 ---
 
@@ -23,7 +23,7 @@
 
 ## Présentation
 
-Instaffo Document Assistant est une plateforme backend avancée permettant d’indexer et d’interroger facilement des documents PDF via une interface API sécurisée. Grâce à l’intelligence artificielle et aux modèles de langage, le système génère des embeddings vectoriels pour chaque document, stocke ces données dans une base vectorielle locale (FAISS) ou cloud (Pinecone), et répond aux questions en langage naturel en citant les sources précises.
+ Document Assistant est une plateforme backend avancée permettant d’indexer et d’interroger facilement des documents PDF via une interface API sécurisée. Grâce à l’intelligence artificielle et aux modèles de langage, le système génère des embeddings vectoriels pour chaque document, stocke ces données dans une base vectorielle locale (FAISS) ou cloud (Pinecone), et répond aux questions en langage naturel en citant les sources précises.
 
 Ce projet a été développé avec Django 5.2 LTS pour garantir stabilité et performance, Celery pour le traitement asynchrone, et un système d’authentification JWT pour sécuriser l’accès.
 
@@ -75,7 +75,7 @@ Ce projet a été développé avec Django 5.2 LTS pour garantir stabilité et pe
 1. Clone le repo :  
 ```bash
 git clone <URL_DU_REPO>
-cd instaffo-document-assistant
+cd -document-assistant
 ```
 
 2. Crée un environnement virtuel et active-le :  
@@ -110,7 +110,7 @@ VECTORSTORE=faiss
 # VECTORSTORE=pinecone
 PINECONE_API_KEY=ton_api_key_pinecone
 PINECONE_ENV=us-west1-gcp
-PINECONE_INDEX_NAME=instaffo-index
+PINECONE_INDEX_NAME=-index
 
 # Sentry (optionnel)
 SENTRY_DSN=https://ton_dsn_sentry@o0.ingest.sentry.io/0
@@ -251,8 +251,8 @@ Forkez, créez une branche, faites vos modifications puis un pull request.
 
 ## Licence
 
-MIT License © 2025 Instaffo
+MIT License © 2025 
 
 ---
 
-Merci d’utiliser Instaffo Document Assistant !
+Merci d’utiliser  Document Assistant !
